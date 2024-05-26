@@ -1,13 +1,15 @@
-package com.example.livemessenger
+package com.example.livemessenger.settings
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.livemessenger.settings.data.Filed
+import com.example.livemessenger.R
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,11 +26,16 @@ class SettingsActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val itemList = listOf(
-            Filed("Title 1", "Description 1"),
-            Filed("Title 2", "Description 2"),
-            Filed("Title 3", "Description 3")
+            SettingData("Title 1", "Description 1"),
+            SettingData("Title 2", "Description 2"),
+            SettingData("Title 3", "Description 3")
         )
 
-        recyclerView.setAdapter(MyAdapter(itemList))
+        recyclerView.setAdapter(SettingDataAdapter(itemList))
+
+        val button: Button = findViewById(R.id.BackButton)
+        button.setOnClickListener {
+            finish()
+        }
     }
 }
