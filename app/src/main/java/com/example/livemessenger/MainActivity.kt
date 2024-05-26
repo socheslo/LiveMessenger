@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 
 import android.content.Intent
 import android.widget.Button
-import com.example.livemessenger.settings.SettingsActivity
+import com.example.livemessenger.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
 
