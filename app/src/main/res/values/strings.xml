@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">LiveMessenger</string>
+    <string name="image_description">Description of the image</string>
+    <string name="hint_username">Enter your username</string>
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_surname">Enter your surname</string>
+    <string name="hint_phone_number">Enter your phone number</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="hint_confirm_password">Enter your confirm_password</string>
 </resources>
+
