@@ -7,5 +7,6 @@
     <string name="hint_phone_number">Enter your phone number</string>
     <string name="hint_password">Enter your password</string>
     <string name="hint_confirm_password">Enter your confirm_password</string>
+    <string name="hint_login">Enter your login</string>
 </resources>
 
