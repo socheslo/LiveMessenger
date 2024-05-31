@@ -8,17 +8,14 @@
     tools:context=".Autorization">
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/image_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/_555597459" />
+        app:srcCompat="@drawable/_30f2a095e24b14699bfce992d2c012f" />
 
     <EditText
         android:id="@+id/textView"
@@ -27,7 +24,9 @@
         android:layout_marginTop="480dp"
         android:autofillHints="Login"
         android:hint="@string/hint_login"
+        android:textColorHint="@color/red"
         android:inputType="text"
+        android:textColor="@android:color/holo_red_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +36,9 @@
         android:layout_height="48dp"
         android:autofillHints="Password"
         android:hint="@string/hint_password"
+        android:textColorHint="@color/red"
         android:inputType="text"
+        android:textColor="@android:color/holo_red_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 

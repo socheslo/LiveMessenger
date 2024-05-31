@@ -8,17 +8,13 @@
     tools:context=".Registration">
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/image_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/_555597459" />
+        app:srcCompat="@drawable/_30f2a095e24b14699bfce992d2c012f" />
 
     <EditText
         android:id="@+id/textView"
@@ -27,6 +23,7 @@
         android:layout_marginTop="480dp"
         android:autofillHints="username"
         android:hint="@string/hint_username"
+        android:textColorHint="@color/red"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,6 +34,7 @@
         android:layout_height="48dp"
         android:autofillHints="name"
         android:hint="@string/hint_name"
+        android:textColorHint="@color/red"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -48,6 +46,7 @@
         android:layout_marginTop="435dp"
         android:autofillHints="surname"
         android:hint="@string/hint_surname"
+        android:textColorHint="@color/red"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +60,7 @@
         android:autofillHints="phone_number"
         android:hint="@string/hint_phone_number"
         android:inputType="text"
+        android:textColorHint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -71,6 +71,7 @@
         android:layout_marginTop="340dp"
         android:autofillHints="password"
         android:hint="@string/hint_password"
+        android:textColorHint="@color/red"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,7 +81,8 @@
         android:layout_width="406dp"
         android:layout_height="48dp"
         android:autofillHints="confirm_password"
-        android:hint="@string/hint_password"
+        android:hint="@string/hint_confirm_password"
+        android:textColorHint="@color/red"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="parent" />
@@ -89,7 +91,7 @@
         android:id="@+id/button3"
         android:layout_width="207dp"
         android:layout_height="48dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="604dp"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
