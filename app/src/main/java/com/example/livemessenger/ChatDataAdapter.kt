@@ -7,12 +7,25 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-public class ChatDataAdapter(private val itemList: List<ChatData>) : RecyclerView.Adapter<ChatDataAdapter.MyViewHolder>() {
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ChatDataAdapter(
+    private val itemList: List<ChatData>,
+    private val listener: OnItemClickListener
+) : RecyclerView.Adapter<ChatDataAdapter.MyViewHolder>() {
+
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val largeImageView: ImageView = itemView.findViewById(R.id.large_image)
         val smallImageView: ImageView = itemView.findViewById(R.id.small_image)
         val titleTextView: TextView = itemView.findViewById(R.id.title_text)
         val descriptionTextView: TextView = itemView.findViewById(R.id.description_text)
+
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(position.toString())
+                }
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

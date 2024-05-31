@@ -11,9 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 import android.content.Intent
 import android.widget.Button
+import com.example.livemessenger.chat.ChatActivity
 import com.example.livemessenger.settings.SettingsActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ChatDataAdapter
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         // Настройка RecyclerView
         recyclerView = findViewById(R.id.chats)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = ChatDataAdapter(itemList)
+        adapter = ChatDataAdapter(itemList, this)
         recyclerView.adapter = adapter
     }
 
@@ -57,4 +58,11 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    override fun onItemClick(id: String) {
+        val intent = Intent(this, ChatActivity::class.java)
+        startActivity(intent)
+    }
+}
+interface OnItemClickListener {
+    fun onItemClick(id: String)
 }
