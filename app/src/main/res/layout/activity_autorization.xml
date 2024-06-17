@@ -15,18 +15,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_30f2a095e24b14699bfce992d2c012f" />
+        app:srcCompat="@drawable/reg_background" />
 
     <EditText
         android:id="@+id/textView"
-        android:layout_width="412dp"
-        android:layout_height="48dp"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
         android:layout_marginTop="480dp"
         android:autofillHints="Login"
         android:hint="@string/hint_login"
-        android:textColorHint="@color/red"
         android:inputType="text"
         android:textColor="@android:color/holo_red_dark"
+        android:textColorHint="@color/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
