@@ -32,7 +32,7 @@ class ChatAdapter(private val mMessageList: List<Message>) :
             return SentMessageHolder(view)
         } else {
             view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.recieved_message, parent, false)
+                .inflate(R.layout.received_message, parent, false)
             return ReceivedMessageHolder(view)
         }
     }
