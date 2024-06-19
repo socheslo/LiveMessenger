@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.livemessenger.R
 
 class SettingsActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,16 +23,19 @@ class SettingsActivity : AppCompatActivity() {
             insets
         }
 
+        
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val itemList = listOf(
-            SettingData("Title 1", "Description 1"),
-            SettingData("Title 2", "Description 2"),
-            SettingData("Title 3", "Description 3")
+            SettingData("Изменить фон приложения", "Перейдите сюда для изменения фона")
         )
 
-        recyclerView.setAdapter(SettingDataAdapter(itemList))
+        recyclerView.adapter = SettingDataAdapter(itemList) { position ->
+            when (position) {
+                0 -> startActivity(Intent(this, ChangeBackgroundActivity::class.java))
+            }
+        }
 
         val button: Button = findViewById(R.id.BackButton)
         button.setOnClickListener {

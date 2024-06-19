@@ -1,7 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.LiveMessenger" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-    </style>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_light">#000000</color>
+    <color name="background_dark">#FFFFFF</color>
+    <color name="button_text_light">#FFFFFF</color>
+    <color name="button_text_dark">#000000</color>
 </resources>

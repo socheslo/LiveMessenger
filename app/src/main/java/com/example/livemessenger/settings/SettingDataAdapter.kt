@@ -7,12 +7,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.livemessenger.R
 
+class SettingDataAdapter(
+    private val itemList: List<SettingData>,
+    private val onItemClick: (Int) -> Unit
+) : RecyclerView.Adapter<SettingDataAdapter.MyViewHolder>() {
 
-class SettingDataAdapter(private val itemList: List<SettingData>) : RecyclerView.Adapter<SettingDataAdapter.MyViewHolder>() {
-
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.item_title)
         val descriptionTextView: TextView = itemView.findViewById(R.id.item_description)
+
+        init {
+            itemView.setOnClickListener {
+                onItemClick(adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
